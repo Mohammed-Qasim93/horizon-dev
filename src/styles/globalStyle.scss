@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+@import "color";
+@import "nav.style";
+@import "showCase.style";
+@import "ourWork.style";
+@import "about.style";
+@import "contact.style";
+@import "card.style";
+@import "footer.style";

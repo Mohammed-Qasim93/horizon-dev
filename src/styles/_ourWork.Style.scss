@@ -1,0 +1,13 @@
+.ourWork {
+  background-color: $primary-light;
+  color: $ourWork-color;
+  min-height: 100vh;
+
+  .cards {
+    padding: 3rem 10rem 0rem 10rem;
+    display: grid;
+    // text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}

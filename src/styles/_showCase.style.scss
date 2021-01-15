@@ -1,0 +1,58 @@
+.showCase {
+  height: 90vh;
+  word-spacing: 5px;
+  position: relative;
+  background-image: url("../images/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .showCaseItems {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    .text {
+      height: 30%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h1 {
+        font-size: 6rem;
+        text-transform: uppercase;
+        color: $primary;
+      }
+
+      p {
+        font-size: 3rem;
+        color: $primary-light;
+        text-transform: capitalize;
+      }
+    }
+
+    a {
+      background-color: transparent;
+      color: $hover-back;
+      font-size: 1.7rem;
+      border-radius: 0.5rem;
+      border: 2px solid $hover-back;
+      font-weight: 600;
+
+      &:hover {
+        color: $primary;
+        background-color: $hover-back;
+        border: 2px solid $primary;
+      }
+    }
+  }
+}

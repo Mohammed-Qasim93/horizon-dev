@@ -1,0 +1,55 @@
+.nav {
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  padding: 2rem 10rem 0rem 10rem;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #471c30 0%, $nav-back 35%);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  .logo {
+    flex: 2;
+    width: 50%;
+    height: 100%;
+    margin: -10px;
+    .logo-link {
+      width: 25%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      justify-content: flex-end;
+      align-items: center;
+      display: flex;
+      img {
+        width: 30%;
+        height: 100%;
+        margin-right: 10px;
+      }
+      h3 {
+        color: $nav;
+        flex: 1;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    flex: 1;
+
+    li {
+      .navLink {
+        cursor: pointer;
+        color: $nav;
+        padding: 0rem;
+
+        &:hover {
+          color: $primary-light;
+        }
+      }
+    }
+  }
+}

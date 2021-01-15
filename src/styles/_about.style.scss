@@ -1,0 +1,30 @@
+.about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $nav-back;
+  color: $primary;
+  .upper {
+    padding-top: 4rem;
+    flex: 1;
+
+    text-align: center;
+    h2 {
+      font-size: 5rem;
+      text-transform: capitalize;
+    }
+    p {
+      font-size: 3rem;
+    }
+  }
+
+  .lower {
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 3rem 10rem 0rem 10rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
