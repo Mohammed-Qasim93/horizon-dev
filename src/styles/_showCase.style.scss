@@ -40,18 +40,25 @@
       }
     }
 
-    a {
-      background-color: transparent;
-      color: $hover-back;
-      font-size: 1.7rem;
-      border-radius: 0.5rem;
-      border: 2px solid $hover-back;
-      font-weight: 600;
+    .a {
+      a {
+        height: 100%;
+        width: 100%;
+        box-shadow: 1px 1px 10px $hover-back;
+        background-color: transparent;
+        color: $hover-back;
+        font-size: 1.7rem;
+        border-radius: 0.5rem;
+        border: 2px solid $hover-back;
+        font-weight: 600;
+        cursor: pointer;
 
-      &:hover {
-        color: $primary;
-        background-color: $hover-back;
-        border: 2px solid $primary;
+        &:hover {
+          color: $primary;
+          background-color: $hover-back;
+          border: 2px solid $primary;
+          box-shadow: 1px 1px 10px $primary;
+        }
       }
     }
   }

@@ -2,13 +2,17 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: $nav-back;
   color: $primary;
-  .upper {
-    padding-top: 4rem;
-    flex: 1;
 
+  .upper {
+    overflow: hidden;
+    padding: 1rem 10rem 0rem 10rem;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     text-align: center;
     h2 {
       font-size: 5rem;
@@ -20,11 +24,51 @@
   }
 
   .lower {
-    flex: 1;
-    flex-wrap: wrap;
-    padding: 3rem 10rem 0rem 10rem;
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    padding: 0rem 10rem 0rem 10rem;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    .card {
+      width: 30%;
+      height: 90%;
+
+      .cardAsLink {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        .cardImg {
+          height: 50%;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            border-radius: 50%;
+          }
+        }
+        .cardBody {
+          justify-content: space-evenly;
+          height: 40%;
+          padding: 3rem 0rem 0rem 0rem;
+          .heading {
+            font-size: 2rem;
+            height: 20%;
+            text-align: center;
+          }
+          .text {
+            padding-top: 1rem;
+            text-align: center;
+            height: 80%;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }

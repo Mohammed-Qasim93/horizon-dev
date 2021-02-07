@@ -18,6 +18,12 @@ a {
   padding: 1rem 3rem;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
 }
@@ -29,4 +35,7 @@ ul {
 @import "about.style";
 @import "contact.style";
 @import "card.style";
+@import "form.style";
+@import "input.style";
+@import "button.style";
 @import "footer.style";

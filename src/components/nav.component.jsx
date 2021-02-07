@@ -6,10 +6,19 @@ const Nav = () => {
   return (
     <div className='nav'>
       <div className='logo' id='nav'>
-        <a href='' className='logo-link'>
+        <Link
+          activeClass='active'
+          to='home'
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          duration={500}
+          delay={100}
+          isDynamic={true}
+          className='logo-link'>
           <img src={logo} alt='Logo' />
           <h3>Horizone Dev</h3>
-        </a>
+        </Link>
       </div>
       <ul>
         <li>

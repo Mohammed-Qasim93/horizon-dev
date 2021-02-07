@@ -1,20 +1,43 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { HomeSectionAnimation, titleAnim, buttonAnim } from "../Animation";
+import { Link } from "react-scroll";
 
 const ShowCase = () => {
   return (
-    <div className='showCase'>
-      <div className='showCaseItems'>
-        <div className='text'>
-          <h1 className='heading'>
+    <motion.div className='showCase'>
+      <motion.div
+        variants={HomeSectionAnimation}
+        initial='hidden'
+        animate='show'
+        className='showCaseItems'>
+        <motion.div
+          variants={HomeSectionAnimation}
+          initial='hidden'
+          animate='show'
+          className='text'>
+          <motion.h1 variants={titleAnim} className='heading'>
             welcome to <span>horizon dev</span>
-          </h1>
-          <p className='showCaseText'>
+          </motion.h1>
+          <motion.p variants={titleAnim} className='showCaseText'>
             where every thing you imagine became true so dont wait contact us
-          </p>
-        </div>
-        <a href='#contact'>Contact</a>
-      </div>
-    </div>
+          </motion.p>
+        </motion.div>
+        <motion.div variants={buttonAnim} className='a'>
+          <Link
+            to='contact'
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            duration={500}
+            delay={100}
+            offset={-70}
+            isDynamic={true}>
+            Contact
+          </Link>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

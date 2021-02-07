@@ -1,28 +1,85 @@
 import React from "react";
 
-const Card = ({ title, img, url, name, type }) => {
+import { motion, useAnimation } from "framer-motion";
+import { photoAnim, titleAnim, FadeIn } from "../Animation";
+import { useInView } from "react-intersection-observer";
+
+const Card = ({ title, img, url, name, type, desc }) => {
+  const controlls = useAnimation();
+  const [element, view] = useInView({ threshold: 0.25 });
+  if (view) {
+    controlls.start("show");
+  } else {
+    controlls.start("hidden");
+  }
   return url ? (
-    <div className='card'>
-      <a rel='noreferrer' target='_blank' className='cardAsLink' href={url}>
-        <div className='cardImg'>
-          <img src={img} alt='' />
-        </div>
-        <div className='cardBody'>
-          <h4>{title ? title : name}</h4>
-          <p>{url ? url : type}</p>
-        </div>
+    <motion.div
+      ref={element}
+      variants={FadeIn}
+      initial='hidden'
+      animate={controlls}
+      className='card'>
+      <a target='_blank' rel='noreferrer' className='cardAsLink' href={url}>
+        <motion.div className='cardImg'>
+          <motion.img
+            variants={photoAnim}
+            initial='hidden'
+            animate={controlls}
+            src={img}
+            alt=''
+          />
+        </motion.div>
+        <motion.div className='cardBody'>
+          <motion.div className='heading'>
+            <motion.h4
+              variants={titleAnim}
+              animate={controlls}
+              initial='hidden'>
+              {title ? title : name}
+            </motion.h4>
+          </motion.div>
+          <motion.div className='text'>
+            <motion.p variants={titleAnim} animate={controlls} initial='hidden'>
+              {desc ? desc : type}
+            </motion.p>
+          </motion.div>
+        </motion.div>
       </a>
-    </div>
+    </motion.div>
   ) : (
-    <div className='card'>
-      <div className='cardImg'>
-        <p>{img}</p>
+    <motion.div
+      ref={element}
+      variants={FadeIn}
+      initial='hidden'
+      animate={controlls}
+      className='card'>
+      <div className='cardAsLink'>
+        <motion.div className='cardImg'>
+          <motion.img
+            variants={photoAnim}
+            initial='hidden'
+            animate={controlls}
+            src={img}
+            alt=''
+          />
+        </motion.div>
+        <motion.div className='cardBody'>
+          <motion.div className='heading'>
+            <motion.h4
+              variants={titleAnim}
+              animate={controlls}
+              initial='hidden'>
+              {title ? title : name}
+            </motion.h4>
+          </motion.div>
+          <motion.div className='text'>
+            <motion.p variants={titleAnim} animate={controlls} initial='hidden'>
+              {desc ? desc : type}
+            </motion.p>
+          </motion.div>
+        </motion.div>
       </div>
-      <div className='cardBody'>
-        <h4>{title ? title : name}</h4>
-        <p>{url ? url : type}</p>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

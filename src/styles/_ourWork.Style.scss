@@ -1,13 +1,23 @@
 .ourWork {
   background-color: $primary-light;
   color: $ourWork-color;
-  min-height: 100vh;
+  height: 100vh;
+  .hide {
+    overflow: hidden;
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 6rem;
+      font-size: 5rem;
+    }
+  }
 
   .cards {
+    height: 90%;
     padding: 3rem 10rem 0rem 10rem;
     display: grid;
     // text-align: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-gap: 1rem;
   }
 }

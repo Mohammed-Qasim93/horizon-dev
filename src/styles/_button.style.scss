@@ -1,0 +1,16 @@
+button {
+  padding: 1rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 4rem auto 0rem auto;
+  width: 30%;
+
+  &:hover {
+    color: $primary;
+    background-color: $hover-back;
+    border: none;
+    box-shadow: 1px 1px 10px $primary;
+  }
+}

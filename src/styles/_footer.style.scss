@@ -1,8 +1,98 @@
 .footer {
-  padding: 3rem 10rem 0rem 10rem;
-  display: flex;
-  justify-content: space-between;
   height: 50vh;
-  background-color: $nav-back;
-  color: $nav;
+  .upperFooter {
+    padding: 3rem 10rem 0rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    background-color: $nav-back-light;
+    color: $nav;
+    text-transform: capitalize;
+    .info {
+      height: 40%;
+      width: 33.3333%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .infoText {
+        font-size: 1.7rem;
+      }
+    }
+
+    .sections {
+      width: 33.3333%;
+      height: 55%;
+
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      h2 {
+        font-size: 2.5rem;
+      }
+      .sectionsLinks {
+        width: 20%;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.7rem;
+
+        a {
+          padding: 0rem 0rem 0.7rem 1rem;
+          color: $nav;
+          cursor: pointer;
+
+          &:hover {
+            color: $primary-light;
+          }
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+      height: 55%;
+      width: 10.3333%;
+      flex-direction: column;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .linksIcons {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          font-size: 2.5rem;
+          width: 10%;
+          padding: 0rem 0rem 0.7rem 1rem;
+          color: $nav;
+          cursor: pointer;
+
+          &:hover {
+            color: $primary-light;
+          }
+        }
+      }
+    }
+  }
+
+  .lowerFooter {
+    text-align: center;
+    background-color: $nav-back;
+    color: $nav;
+    text-transform: capitalize;
+    padding: 1rem;
+    p {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
 }

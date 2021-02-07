@@ -4,4 +4,46 @@
   padding: 2rem 10rem 0rem 10rem;
   justify-content: space-between;
   background-color: $primary;
+  overflow: hidden;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 45%;
+    overflow: hidden;
+
+    h2 {
+      font-size: 6rem;
+    }
+    p {
+      font-size: 4rem;
+    }
+    .social {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 4rem;
+      a {
+        padding: 0;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+
+    h2 {
+      height: 2%;
+      text-align: center;
+      font-size: 6rem;
+    }
+  }
+  .contactHeading {
+    overflow: hidden;
+  }
 }
